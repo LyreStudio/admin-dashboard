@@ -1,0 +1,43 @@
+{
+  "id": "admin-dashboard",
+  "title": "Admin dashboard",
+  "category": "Operations",
+  "upstreamRepository": "StartBootstrap/startbootstrap-sb-admin",
+  "upstreamCommit": "adde34b9616b9840c4da756323131f59ac445090",
+  "upstreamUrl": "https://codeload.github.com/StartBootstrap/startbootstrap-sb-admin/zip/adde34b9616b9840c4da756323131f59ac445090",
+  "upstreamSha256": "0aca1517e8ecfa8737b7d067d5ab0a6f3c9f33264e35ee4d4cfe24def903b445",
+  "upstreamBytes": 160004,
+  "license": "MIT",
+  "licenseSha256": "e8b857747301fcd4c885b3216544b18bbf60328aec2c34da614787346cf40282",
+  "upstreamUpdated": "2024-08-06T01:32:26Z",
+  "archived": false,
+  "upstreamScripts": {
+    "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+    "build:assets": "node scripts/build-assets.js",
+    "build:pug": "node scripts/build-pug.js",
+    "build:scripts": "node scripts/build-scripts.js",
+    "build:scss": "node scripts/build-scss.js",
+    "clean": "node scripts/clean.js",
+    "start": "npm run build && node scripts/start.js",
+    "start:debug": "npm run build && node scripts/start-debug.js"
+  },
+  "upstreamDependencies": {
+    "bootstrap": "5.2.3"
+  },
+  "summary": "A multi-page dashboard UI with sample tables, charts and account screens. It has no authentication backend.",
+  "features": [
+    "Dashboard and sample data tables",
+    "Responsive sidebar and account page layouts",
+    "UI only; no authentication or live business data"
+  ],
+  "reviewDate": "2026-10-14",
+  "adaptations": [
+    "Use upstream prebuilt HTML/CSS/JS as editable source; no build toolchain required",
+    "Replace all bundled images, logos and illustrations with original SVG sample artwork",
+    "Remove SB Forms runtime and API-token attributes; explicitly label sample forms and content",
+    "Add a dependency-free local server with a public-file allowlist"
+  ],
+  "replacedAssets": [
+    "assets/img/error-404-monochrome.svg"
+  ]
+}
